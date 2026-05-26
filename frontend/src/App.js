@@ -94,8 +94,8 @@ export default function App() {
           volume:       parseInt(f.volume),
         })),
       };
-      const res = await axios.post('http://127.0.0.1:8000/calculate', payload);
-      const interpretRes = await axios.post('http://127.0.0.1:8000/interpret', res.data);
+      const res = await axios.post('https://facilities-planner-backend.onrender.com/calculate', payload);
+      const interpretRes = await axios.post('https://facilities-planner-backend.onrender.com/interpret', res.data);
       setResult({ data: res.data, stations: payload.stations, analysis: interpretRes.data.analysis });
     } catch (e) {
       setError(e.response?.data?.detail ? JSON.stringify(e.response.data.detail, null, 2) : e.message);
