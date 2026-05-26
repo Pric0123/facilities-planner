@@ -10,7 +10,7 @@ app = FastAPI()
 # 允許 React 前端連線
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000","http://localhost:3001"],
+    allow_origins=["http://localhost:3000","http://localhost:3001","https://facilities-planner.vercel.app"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
