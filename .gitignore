@@ -1,7 +1,5 @@
 backend/venv/
 frontend/node_modules/
-frontend/build/
 __pycache__/
 *.pyc
 backend/write_app.py
-
